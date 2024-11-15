@@ -1,7 +1,7 @@
 
 import  { forwardRef } from 'react'
 
-import AirCond from '../images/AirCond.jpeg'
+import AirCond from '../images/air.jpeg'
 import MilkCooler from '../images/MilkCooler.webp'
 import MicroWave from '../images/MicroWave.jpeg'
 import Dryer from '../images/dryer.webp'

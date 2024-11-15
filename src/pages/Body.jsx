@@ -1,7 +1,6 @@
 // import { useState } from 'react'
 import banner from "../images/banner.jpg";
 import Bg from "../assets/bg.webp";
-import Logo from "../assets/loggo.png";
 
 function Body() {
   const scrollToServices = () => {
