@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Professional fridge repair services. Quick, reliable, and affordable appliance maintenance solutions in your area." />
-    <meta name="keywords" content="fridge repair, appliance maintenance, fridge service, repair services, affordable fridge repair" />
+    <meta name="keywords" content="fridge repair, appliance maintenance, fridge service, repair services, affordable fridge repair, fridge repair experts, local fridge repair" />
     <meta name="author" content="Fridge Repair Experts" />
+    <meta name="robots" content="index, follow" />
     <link rel="icon" type="image/svg+xml" href="/LogoTab.jpg" />
 
     <!-- Social Media Open Graph Tags -->
@@ -19,18 +20,52 @@
     <meta name="twitter:description" content="Quick and reliable fridge repair services at affordable prices." />
     <meta name="twitter:image" content="https://fridgerepair.netlify.app/logo-social.jpg" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="sitemap.xml">
+    <!-- Sitemap Link -->
+    <link rel="sitemap" type="application/xml" href="https://fridgerepair.netlify.app/sitemap.xml">
 
     <title>Fridge Repair Services | Quick & Reliable Solutions</title>
     <meta name="google-site-verification" content="W7YXeNxCskuK-7BiO7DZXNS12TcuErhz2cdI96ZGyZo" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Fridge Repair Experts",
+      "url": "https://fridgerepair.netlify.app",
+      "logo": "https://fridgerepair.netlify.app/logo-social.jpg",
+      "description": "Quick and reliable fridge repair services at affordable prices.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Main St.",
+        "addressLocality": "Your City",
+        "addressRegion": "Your Region",
+        "postalCode": "12345",
+        "addressCountry": "Your Country"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1234567890",
+        "contactType": "Customer Service"
+      },
+      "sameAs": [
+        "https://www.facebook.com/yourpage",
+        "https://twitter.com/yourprofile"
+      ]
+    }
+    </script>
   </head>
   <body>
-    <div id="root"></div>
+    <!-- Main Content -->
+    <div id="root">
+      <h1>Professional Fridge Repair Services</h1>
+      <p>Quick and reliable fridge repair services at affordable prices. Our experts are ready to serve you with efficient solutions for all your appliance maintenance needs.</p>
+      <img src="logo.jpg" alt="Fridge Repair Services Logo" />
+    </div>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
