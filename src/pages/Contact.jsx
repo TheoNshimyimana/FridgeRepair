@@ -2,7 +2,6 @@ import { useState, useRef } from "react";
 import { IoLocationOutline } from "react-icons/io5";
 import { BsWhatsapp } from "react-icons/bs";
 import { IoIosCall } from "react-icons/io";
-import { TbClockHour4 } from "react-icons/tb";
 import { MdOutlineMail } from "react-icons/md";
 import {
   IoMdCheckmarkCircleOutline,
