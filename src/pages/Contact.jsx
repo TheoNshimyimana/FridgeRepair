@@ -74,7 +74,7 @@ function Contact() {
             </p>
           </div>
           <div className="text-center p-4 bg-slate-100 shadow-md rounded-lg">
-            <a href="https://wa.me/0789051942" target="blank">
+            <a href="https://wa.me/+250789051942" target="blank">
               <BsWhatsapp className="text-5xl text-custom-blue mx-auto" />
               <h2 className="text-custom-blue text-xl font-semibold mt-3">
                 Whatsapp
