@@ -129,7 +129,7 @@ function Navbar() {
             className="fixed top-0 right-0 bg-white w-1/2 h-1/2 z-40 shadow-lg md:hidden flex flex-col items-center"
           >
             <ul className="flex flex-col items-center gap-10 mt-12">
-              {["home", "about", "services", "products", "team", "contact"].map(
+              {["home", "about", "services", "contact"].map(
                 (section) => (
                   <li
                     key={section}
