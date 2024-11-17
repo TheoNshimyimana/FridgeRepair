@@ -1,57 +1,58 @@
-import { useState, useRef } from 'react'
-import { IoLocationOutline } from 'react-icons/io5'
-import { IoIosCall } from 'react-icons/io'
-import { TbClockHour4 } from 'react-icons/tb'
-import { MdOutlineMail } from 'react-icons/md'
+import { useState, useRef } from "react";
+import { IoLocationOutline } from "react-icons/io5";
+import { BsWhatsapp } from "react-icons/bs";
+import { IoIosCall } from "react-icons/io";
+import { TbClockHour4 } from "react-icons/tb";
+import { MdOutlineMail } from "react-icons/md";
 import {
   IoMdCheckmarkCircleOutline,
   IoMdCloseCircleOutline,
-} from 'react-icons/io'
-import Loader from './Loader'
+} from "react-icons/io";
+import Loader from "./Loader";
 
 function Contact() {
-  const [loading, setLoading] = useState(false)
-  const [success, setSuccess] = useState(null)
-  const [error, setError] = useState(null)
-  const formRef = useRef(null)
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(null);
+  const [error, setError] = useState(null);
+  const formRef = useRef(null);
 
   const onSubmit = async (event) => {
-    event.preventDefault()
-    setLoading(true)
-    setError(null)
-    setSuccess(null)
+    event.preventDefault();
+    setLoading(true);
+    setError(null);
+    setSuccess(null);
 
-    const formData = new FormData(event.target)
-    formData.append('access_key', 'e36a5b0e-6d6c-4dfe-8998-489c6c8d3647')
+    const formData = new FormData(event.target);
+    formData.append("access_key", "e36a5b0e-6d6c-4dfe-8998-489c6c8d3647");
 
-    const object = Object.fromEntries(formData)
-    const json = JSON.stringify(object)
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
 
     try {
-      const res = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
+          "Content-Type": "application/json",
+          Accept: "application/json",
         },
         body: json,
-      }).then((res) => res.json())
+      }).then((res) => res.json());
 
       if (res.success) {
-        setSuccess('Your message has been sent successfully!')
-        formRef.current.reset()
-        setTimeout(() => setSuccess(null), 5000) 
+        setSuccess("Your message has been sent successfully!");
+        formRef.current.reset();
+        setTimeout(() => setSuccess(null), 5000);
       } else {
-        setError('Failed to send your message. Please try again.')
-        setTimeout(() => setError(null), 5000) 
+        setError("Failed to send your message. Please try again.");
+        setTimeout(() => setError(null), 5000);
       }
     } catch (err) {
-      setError('Something went wrong. Please try again later.')
-      setTimeout(() => setError(null), 5000) 
+      setError("Something went wrong. Please try again later.");
+      setTimeout(() => setError(null), 5000);
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
   return (
     <section
@@ -74,21 +75,30 @@ function Contact() {
             </p>
           </div>
           <div className="text-center p-4 bg-slate-100 shadow-md rounded-lg">
-            <TbClockHour4 className="text-5xl text-custom-blue mx-auto" />
-            <h2 className="text-custom-blue text-xl font-semibold mt-3">
-              Opening Hours
-            </h2>
-            <p className="text-gray-600"> Mon - Sun: 24/24 Hours</p>
+            <a href="https://wa.me/0789051942" target="blank">
+              <BsWhatsapp className="text-5xl text-custom-blue mx-auto" />
+              <h2 className="text-custom-blue text-xl font-semibold mt-3">
+                Whatsapp
+              </h2>
+            </a>
+            <a href="https://wa.me/0789051942" target="blank">
+              <p className="text-gray-600"> Chat With Us</p>
+            </a>
           </div>
           <div className="text-center p-4 bg-slate-100 shadow-md rounded-lg">
-            <IoIosCall className="text-5xl text-custom-blue mx-auto" />
-            <h2 className="text-custom-blue text-xl font-semibold mt-3">
-              Call Us
-            </h2>
-            
-            <a href="tel:+250 789051942" className="text-gray-600">Mobile: +250 789051942</a>
-            <a href="tel:+250 789051942" className="text-gray-600">/0 729975280</a>
-            
+            <a href="tel:+250 789051942">
+              <IoIosCall className="text-5xl text-custom-blue mx-auto" />
+              <h2 className="text-custom-blue text-xl font-semibold mt-3">
+                Call Us
+              </h2>
+            </a>
+
+            <a href="tel:+250 789051942" className="text-gray-600">
+              Mobile: +250 789051942
+            </a>
+            <a href="tel:+250 789051942" className="text-gray-600">
+              /0 729975280
+            </a>
           </div>
           <div className="text-center p-4 bg-slate-100 shadow-md rounded-lg">
             <MdOutlineMail className="text-5xl text-custom-blue mx-auto" />
@@ -139,15 +149,14 @@ function Contact() {
                 type="submit"
                 disabled={loading}
                 className={`bg-custom-blue font-semibold w-1/2 text-lg rounded-md p-1 mt-4 text-white hover:bg-blue-600 transition duration-300 ${
-                  loading ? 'cursor-not-allowed' : ''
+                  loading ? "cursor-not-allowed" : ""
                 }`}
               >
-                {loading ? <Loader /> : 'Submit'}
+                {loading ? <Loader /> : "Submit"}
               </button>
             </div>
           </form>
 
-          
           {success && (
             <div className="flex items-center font bo gap-3 mt-4 font-semibold p-4 bg-green-100 text-green-700 rounded-md">
               <IoMdCheckmarkCircleOutline className="text-2xl" />
@@ -163,7 +172,7 @@ function Contact() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Contact
+export default Contact;

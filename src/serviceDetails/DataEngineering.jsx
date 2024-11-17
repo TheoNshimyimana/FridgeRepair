@@ -8,7 +8,7 @@ const DataEngineering = () => {
       <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
         <div className="flex items-center bg-custom-blue p-6 text-white">
           <FaDatabase className="text-5xl mr-4" />
-          <h1 className="text-4xl font-semibold">Data Engineering</h1>
+          <h1 className="text-4xl font-semibold">Fredge and freezer maintenance</h1>
         </div>
         <div className="p-6">
           <h2 className="text-2xl text-custom-yellow font-semibold mb-4">
